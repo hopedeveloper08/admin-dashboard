@@ -1,0 +1,18 @@
+import { ReactNode } from "react";
+import BackgroundOverlay from "./components/common/BackgroundOverlay";
+import Topbar from "./components/Topbar/Topbar";
+
+export default function DashboardLayout({ children }: { children: ReactNode }) {
+  return (
+    <main className="flex">
+      {/* <Sidebar /> */}
+      <section className="grow *:px-6">
+        <Topbar />
+        <div className="mt-6 container mx-auto">
+          <div className="relative z-10">{children}</div>
+          <BackgroundOverlay />
+        </div>
+      </section>
+    </main>
+  );
+}
