@@ -1,0 +1,346 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* =========================================================
+   DaisyUI
+   ========================================================= */
+
+@plugin "daisyui" {
+  themes: hope-light, dark;
+}
+
+
+/* =========================================================
+   HOPE LIGHT
+   ========================================================= */
+
+@plugin "daisyui/theme" {
+  name: "hope-light";
+  default: true;
+  color-scheme: light;
+
+  /* =======================================================
+     Surfaces
+     ======================================================= */
+
+  --color-base-100: #ffffff;
+  --color-base-200: #f8fafc;
+  --color-base-300: #e2e8f0;
+  --color-base-content: #0f172a;
+
+  /* =======================================================
+     Brand
+     ======================================================= */
+
+  /* Primary — Fast */
+  --color-primary: #0060f0;
+  --color-primary-content: #ffffff;
+  --color-primary-soft: #eaf2ff;
+
+  /* Secondary — Agile */
+  --color-secondary: #00bfa6;
+  --color-secondary-content: #ffffff;
+  --color-secondary-soft: #e6faf6;
+
+  /* Accent — Technology / Energy */
+  --color-accent: #00d0c0;
+  --color-accent-content: #042f2e;
+  --color-accent-soft: #e6fcf9;
+
+  /* =======================================================
+     Neutral
+     ======================================================= */
+
+  --color-neutral: #0f172a;
+  --color-neutral-content: #f8fafc;
+
+  /* =======================================================
+     Semantic
+     ======================================================= */
+
+  --color-info: #38bdf8;
+  --color-info-content: #082f49;
+
+  --color-success: #10b981;
+  --color-success-content: #022c22;
+
+  --color-warning: #f59e0b;
+  --color-warning-content: #422006;
+
+  --color-error: #ef4444;
+  --color-error-content: #ffffff;
+
+  /* =======================================================
+     Shape
+     ======================================================= */
+
+  --radius-selector: 0.5rem;
+  --radius-field: 0.625rem;
+  --radius-box: 0.875rem;
+
+  /* =======================================================
+     Components
+     ======================================================= */
+
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+
+  /* =======================================================
+     Effects
+     ======================================================= */
+
+  --depth: 1;
+  --noise: 0;
+}
+
+
+/* =========================================================
+   HOPE DARK
+   ========================================================= */
+
+@plugin "daisyui/theme" {
+  name: "dark";
+  prefersdark: true;
+  color-scheme: dark;
+
+  /* =======================================================
+     Surfaces
+     ======================================================= */
+
+  --color-base-100: #050b18;
+  --color-base-200: #0b1220;
+  --color-base-300: #111c30;
+  --color-base-content: #f8fafc;
+
+  /* =======================================================
+     Brand
+     ======================================================= */
+
+  /* Primary — Fast */
+  --color-primary: #0090f0;
+  --color-primary-content: #ffffff;
+  --color-primary-soft: #08244a;
+
+  /* Secondary — Agile */
+  --color-secondary: #00d0b0;
+  --color-secondary-content: #00251f;
+  --color-secondary-soft: #062b27;
+
+  /* Accent — Technology / Energy */
+  --color-accent: #00d0c0;
+  --color-accent-content: #001f1c;
+  --color-accent-soft: #062e2b;
+
+  /* =======================================================
+     Neutral
+     ======================================================= */
+
+  --color-neutral: #172033;
+  --color-neutral-content: #e2e8f0;
+
+  /* =======================================================
+     Semantic
+     ======================================================= */
+
+  --color-info: #38bdf8;
+  --color-info-content: #082f49;
+
+  --color-success: #34d399;
+  --color-success-content: #022c22;
+
+  --color-warning: #fbbf24;
+  --color-warning-content: #451a03;
+
+  --color-error: #fb7185;
+  --color-error-content: #4c0519;
+
+  /* =======================================================
+     Shape
+     ======================================================= */
+
+  --radius-selector: 0.5rem;
+  --radius-field: 0.625rem;
+  --radius-box: 0.875rem;
+
+  /* =======================================================
+     Components
+     ======================================================= */
+
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+
+  /* =======================================================
+     Effects
+     ======================================================= */
+
+  --depth: 1;
+  --noise: 0;
+}
+
+
+/* =========================================================
+   Global Design Tokens
+   ========================================================= */
+
+@theme {
+  /* -------------------------------------------------------
+     Brand
+     ------------------------------------------------------- */
+
+  --color-brand-primary: #0060f0;
+  --color-brand-primary-soft: #eaf2ff;
+
+  --color-brand-secondary: #00bfa6;
+  --color-brand-secondary-soft: #e6faf6;
+
+  --color-brand-accent: #00d0c0;
+  --color-brand-accent-soft: #e6fcf9;
+
+  /* -------------------------------------------------------
+     Brand Gradient
+     ------------------------------------------------------- */
+
+  --background-image-brand-gradient:
+    linear-gradient(
+      135deg,
+      #0060f0 0%,
+      #0090f0 50%,
+      #00d0c0 100%
+    );
+
+  /* -------------------------------------------------------
+     Typography
+     ------------------------------------------------------- */
+
+  --font-sans: var(--font-vazir), Arial, sans-serif;
+
+  /* -------------------------------------------------------
+     Shadows
+     ------------------------------------------------------- */
+
+  --shadow-brand:
+    0 8px 24px rgba(0, 96, 240, 0.16);
+
+  --shadow-brand-lg:
+    0 16px 40px rgba(0, 96, 240, 0.18);
+
+  /* -------------------------------------------------------
+     Layout
+     ------------------------------------------------------- */
+
+  --spacing-page: 1.5rem;
+
+  /* -------------------------------------------------------
+     Animation
+     ------------------------------------------------------- */
+
+  --ease-brand: cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+
+/* =========================================================
+   Global Styles
+   ========================================================= */
+
+html {
+  font-family: var(--font-vazir), Arial, sans-serif;
+  background: var(--color-base-100);
+  color: var(--color-base-content);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+
+  font-family: var(--font-vazir), Arial, sans-serif;
+
+  background: var(--color-base-100);
+  color: var(--color-base-content);
+
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  transition:
+    background-color 180ms ease,
+    color 180ms ease;
+}
+
+
+/* =========================================================
+   Selection
+   ========================================================= */
+
+::selection {
+  background: rgba(0, 96, 240, 0.18);
+  color: var(--color-base-content);
+}
+
+
+/* =========================================================
+   Focus
+   ========================================================= */
+
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+
+/* =========================================================
+   Form Controls
+   ========================================================= */
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+
+/* =========================================================
+   Links
+   ========================================================= */
+
+a {
+  color: inherit;
+}
+
+
+/* =========================================================
+   Scrollbar
+   ========================================================= */
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color:
+    var(--color-base-300)
+    transparent;
+}
+
+
+/* =========================================================
+   Reduced Motion
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
