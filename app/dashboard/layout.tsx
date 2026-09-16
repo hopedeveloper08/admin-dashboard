@@ -1,5 +1,4 @@
 import { ReactNode } from "react";
-import BackgroundOverlay from "./components/common/BackgroundOverlay";
 import Topbar from "./components/Topbar/Topbar";
 import Sidebar from "./components/Sidebar/Sidebar";
 
@@ -11,7 +10,6 @@ export default function DashboardLayout({ children }: { children: ReactNode }) {
         <Topbar />
         <div className="mt-6 container mx-auto">
           <div className="relative z-10">{children}</div>
-          <BackgroundOverlay />
         </div>
       </section>
     </main>
