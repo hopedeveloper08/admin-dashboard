@@ -34,6 +34,7 @@ export default function TopbarSearchInput() {
           py-1 lg:py-2 px-2 lg:px-4
           rounded-field
           placeholder:text-xs lg:placeholder:text-base
+          bg-base-300
       "
         onFocus={() => kbdRef.current?.classList.add("hidden")}
         onBlur={() => kbdRef.current?.classList.remove("hidden")}

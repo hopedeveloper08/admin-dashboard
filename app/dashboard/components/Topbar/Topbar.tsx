@@ -1,9 +1,8 @@
+import SidebarMenuButton from "../Sidebar/SidebarMenuButton";
 import Notifications from "./TopbarNotification";
 import Profile from "./TopbarProfile";
 import SearchInput from "./TopbarSearchInput";
 import ThemeSwap from "./TopbarThemeSwap";
-
-import { HiOutlineMenu } from "react-icons/hi";
 
 export default function Topbar() {
   return (
@@ -14,17 +13,13 @@ export default function Topbar() {
             justify-between
             gap-2
             shadow-sm
-            z-20
+            z-10
         "
     >
       <div className="flex items-center gap-2">
-        <label
-          htmlFor="sidebar"
-          aria-label="open sidebar"
-          className="lg:hidden btn btn-square btn-ghost drawer-button"
-        >
-          <HiOutlineMenu className="size-6" />
-        </label>
+        <div className="lg:hidden">
+          <SidebarMenuButton isOpen={false} />
+        </div>
         <SearchInput />
       </div>
       <div className="flex items-center">
