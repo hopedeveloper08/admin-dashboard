@@ -3,8 +3,13 @@
 import Link from "next/link";
 import SectionTitle from "./components/common/SectionTitle";
 import Summaries from "./components/Summaries/Summaries";
+import DetailsChart from "./components/DetailsChart/DetailsChart";
+
+import summaryGenerator, { Summary } from "@/lib/dashboard/summeryGenerator";
 
 export default function DashboardPage() {
+  const summaries: Array<Summary> = summaryGenerator(12, 36, 4, 9);
+
   return (
     <>
       <SectionTitle
@@ -15,8 +20,13 @@ export default function DashboardPage() {
           </Link>
         }
       />
+
       <div className="mt-6">
-        <Summaries />
+        <Summaries summaries={summaries} />
+      </div>
+
+      <div className="mt-6">
+        <DetailsChart summaries={summaries} />
       </div>
     </>
   );

@@ -1,13 +1,14 @@
-import summaryGenerator, { Summary } from "@/lib/dashboard/summeryGenerator";
+import { Summary } from "@/lib/dashboard/summeryGenerator";
 import SummariesCard from "./SummariesCard";
 
-
-export default function Summaries() {
-  const summaries: Array<Summary> = summaryGenerator(12, 1573, 82, 741);
-
+export default function Summaries({
+  summaries,
+}: {
+  summaries: Array<Summary>;
+}) {
   return (
     <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-5">
-      {summaries.map((item) => (
+      {summaries.map((item: Summary) => (
         <SummariesCard
           key={item.id}
           id={item.id}
