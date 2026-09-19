@@ -6,7 +6,7 @@ export const PROFILE_AVATAR_URL = `/images/profile-avatar.png`
 export const HOME_PAGE_PRODUCTS_LIST_TABLE_HEADER = [
   'شناسه',
   'عنوان محصول',
-  'وضعیت نمایش',
+  'دسته',
   'قیمت',
   '',
 ]
