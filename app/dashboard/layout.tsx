@@ -9,7 +9,7 @@ export default function DashboardLayout({ children }: { children: ReactNode }) {
       <section className="grow *:px-6">
         <Topbar />
         <div className="mt-6 container mx-auto">
-          <div className="relative z-10">{children}</div>
+          <div className="flex flex-col w-full gap-6 pb-8">{children}</div>
         </div>
       </section>
     </main>

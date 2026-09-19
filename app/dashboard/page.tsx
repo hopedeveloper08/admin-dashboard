@@ -21,13 +21,9 @@ export default function DashboardPage() {
         }
       />
 
-      <div className="mt-6">
-        <Summaries summaries={summaries} />
-      </div>
+      <Summaries summaries={summaries} />
 
-      <div className="mt-6">
-        <DetailsChart summaries={summaries} />
-      </div>
+      <DetailsChart summaries={summaries} />
     </>
   );
 }

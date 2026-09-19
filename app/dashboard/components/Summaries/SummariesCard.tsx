@@ -1,5 +1,7 @@
 import Link from "next/link";
 
+import CountUp from 'react-countup';
+
 import { Summary } from "@/lib/dashboard/summeryGenerator";
 
 export default function SummariesCard({ title, count, Icon, link }: Summary) {
@@ -13,7 +15,7 @@ export default function SummariesCard({ title, count, Icon, link }: Summary) {
           </Link>
         </div>
         <div className="flex items-end gap-1 lg:gap-2">
-          <span className="card-title text-3xl lg:text-2xl">{count}</span>
+          <CountUp end={count} duration={3} className="card-title text-3xl lg:text-2x" />
           <span className="lg:text-base">عدد</span>
         </div>
       </div>

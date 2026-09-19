@@ -9,7 +9,7 @@ type MenuItem = {
   link: string;
 };
 
-const PREFIX_URL = "/dashboard/";
+const PREFIX_URL = "/dashboard";
 
 const menu: Array<MenuItem> = [
   {
@@ -22,25 +22,25 @@ const menu: Array<MenuItem> = [
     id: "products",
     title: "محصولات",
     icon: BsCart2,
-    link: `${PREFIX_URL}products`,
+    link: `${PREFIX_URL}/products`,
   },
   {
     id: "users",
     title: "کاربران",
     icon: HiOutlineUsers,
-    link: `${PREFIX_URL}users`,
+    link: `${PREFIX_URL}/users`,
   },
   {
     id: "tickets",
     title: "تیکت‌ها",
     icon: HiOutlineChatBubbleLeftRight,
-    link: `${PREFIX_URL}tickets`,
+    link: `${PREFIX_URL}/tickets`,
   },
   {
     id: "comments",
-    title: "کامنت‌ها",
+    title: "نظرات‌",
     icon: BsChatLeftText,
-    link: `${PREFIX_URL}comments`,
+    link: `${PREFIX_URL}/comments`,
   },
 ];
 

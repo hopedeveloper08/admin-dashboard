@@ -6,7 +6,7 @@ import SidebarMenuButton from "./SidebarMenuButton";
 import { usePathname } from "next/navigation";
 
 export default function SidebarMenu() {
-  const pathname = usePathname().split("/").pop();
+  const pathname = usePathname();
 
   return (
     <ul className="menu w-full grow">
@@ -14,7 +14,7 @@ export default function SidebarMenu() {
         <SidebarMenuButton isOpen={false} />
       </li>
       {menu.map((nav) => {        
-        const isActive = nav.id === pathname;
+        const isActive = nav.link === pathname;
 
         return (
           <li key={nav.id} className={`${isActive && "border-r-2 border-secondary"}`}>
